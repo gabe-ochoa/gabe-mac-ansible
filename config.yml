@@ -1,16 +1,16 @@
 ---
-user: jpaul
+user: gabe
 downloads: ~/.ansible-downloads/
 
 configure_dotfiles: yes
 configure_sudoers: yes
 configure_osx: yes
 
-dotfiles_repo: https://github.com/jayson/dotfiles.git
-dotfiles_push_url: git@github.com:jayson/dotfiles.git
-dotfiles_repo_local_destination: ~/projects/dotfiles
+dotfiles_repo: https://github.com/gabe-ochoa/dotfiles.git
+dotfiles_push_url: git@github.com:gabe-ochoa/dotfiles.git
+dotfiles_repo_local_destination: ~/code/dotfiles
 dotfiles_files:
-  - .bash_profile
+  - .zshrc
   - .gitignore
   - .inputrc
   - .osx
@@ -18,22 +18,24 @@ dotfiles_files:
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
-  - python
+  - zsh
+  - zsh-completions
   - ccat
   - cfssl
   - ctags
   - dockutil
   - fzf
   - git
+  - git-open
   - gpg
   - jq
   - kubernetes-cli
-  - kubectx
   - mas
   - node
   - rbenv
   - readline
   - ruby
+  - go
   - stern
   - the_silver_searcher
   - vim
@@ -51,25 +53,22 @@ homebrew_cask_apps:
   - alfred
   - google-chrome
   - slack
-  - vagrant
   - virtualbox
   - iterm2
-  - fantastical
   - spectacle
   - dashlane
   - little-snitch
   - micro-snitch
-  - font-robotomono-nerd-font
   - insomniax
   - beardedspice
   - xquartz
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
-mas_email: "jaysonpaul@gmail.com"
+mas_email: "gabeochoa@gmail.com"
 mas_password: ""
 
-osx_script: "/Users/jpaul/.osx --no-restart"
+osx_script: "/Users/gochoa/.osx --no-restart"
 
 gem_packages:
   - name: bundler
@@ -116,4 +115,4 @@ dockitems_to_persist:
 
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
-post_provision_tasks: []
+post_provision_tasks: ["git clone --recursive https://github.com/sorin-ionescu/prezto.git '${ZDOTDIR:-$HOME}/.zprezto'"]
