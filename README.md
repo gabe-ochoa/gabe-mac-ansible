@@ -24,7 +24,7 @@ You can filter which part of the provisioning process to run by specifying a set
 
     ansible-playbook main.yml -i inventory -K --tags "dotfiles,homebrew"
 
-My [dotfiles](https://github.com/jayson/dotfiles) are also installed into the current user's home directory. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
+My [dotfiles](https://github.com/gabe-ochoa/dotfiles) are also installed into the current user's home directory. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
 
 ## Future additions
 

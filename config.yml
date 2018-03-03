@@ -41,11 +41,14 @@ homebrew_installed_packages:
   - vim
   - watch
   - wget
+  - font-hack-nerd-font
+  - kubetail
 
 homebrew_taps:
   - homebrew/core
   - caskroom/cask
   - caskroom/fonts
+  - johanhaleby/kubetail
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -97,14 +100,14 @@ dockitems_to_remove:
   - Downloads
 
 dockitems_to_persist:
-  - name: Notes
-    path: /Applications/Notes.app
+  - name: Sublime Text
+    path: /Applications/Sublime Text.app
     position: 1
   - name: iTerm
     path: /Applications/iTerm.app
     position: 2
-  - name: Fantastical 2
-    path: /Applications/Fantastical 2.app
+  - name: Dash
+    path: /Applications/Dash.app
     position: 3
   - name: Google Chrome
     path: /Applications/Google Chrome.app
@@ -112,7 +115,10 @@ dockitems_to_persist:
   - name: Slack
     path: /Applications/Slack.app
     position: 5
+  - name: iA Writer
+    path: /Applications/iA Writer.app
+    position: 6
 
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
-post_provision_tasks: ["git clone --recursive https://github.com/sorin-ionescu/prezto.git '${ZDOTDIR:-$HOME}/.zprezto'"]
+post_provision_tasks: ["git clone --recursive git@github.com:gabe-ochoa/prezto.git '${ZDOTDIR:-$HOME}/.zprezto'"]
