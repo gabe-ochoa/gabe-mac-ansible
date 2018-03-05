@@ -15,6 +15,7 @@ dotfiles_files:
   - .inputrc
   - .osx
   - .vimrc
+  - .zprezto
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
@@ -59,12 +60,13 @@ homebrew_cask_apps:
   - virtualbox
   - iterm2
   - spectacle
-  - dashlane
   - little-snitch
   - micro-snitch
   - insomniax
-  - beardedspice
-  - xquartz
+  - istat-menus
+  - 1password
+  # - sublime-text
+  - visual-studio-code
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
@@ -121,4 +123,6 @@ dockitems_to_persist:
 
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
-post_provision_tasks: ["git clone --recursive git@github.com:gabe-ochoa/prezto.git '${ZDOTDIR:-$HOME}/.zprezto'"]
+post_provision_tasks: 
+  - "git clone --recursive git@github.com:gabe-ochoa/prezto.git '${ZDOTDIR:-$HOME}/.zprezto'"
+  - "hln /Users/gochoa/code/dotfiles/keybindings.json /Users/gochoa/Library/Application\ Support/Code/User/keybindings.json"

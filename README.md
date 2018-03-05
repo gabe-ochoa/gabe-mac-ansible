@@ -30,11 +30,19 @@ My [dotfiles](https://github.com/gabe-ochoa/dotfiles) are also installed into th
 
 ### Configuration to be added:
 
-  - I need to finish dotfiles setup and vim configuration
+  - [ ] Change shell for user to zsh
+  - [ ] Merge dot files from multiple computers
+  - [ ] iTerm settings and config into dotfiles and move it to correct location
+  - [ ] Keybindings for vscode, put into dotfiles and hardlink to vscode bindings in ~/Library/application suport/code/.../stuff/stuff
+  - [ ] Make hardlinks to dotfile repo
+    - Need to use hln for this on mac because Apple crippled `ln`
+    - brew install hardlink-osx
+  - [ ] git username and email setup
+  - [ ] clone down prezto from forked repo
+  - [ ] pull down fork of pure submodule for custom prompts
+    - replace submodule origin and pull?
+  - [ ] install fonts 
   - Installing licenses for apps
-  - Rest of App Setup
-  - Create Inboxes
-  - 
 
 ## Testing the Playbook
 
